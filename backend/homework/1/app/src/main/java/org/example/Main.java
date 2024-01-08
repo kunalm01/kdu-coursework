@@ -1,8 +1,7 @@
 package org.example;
 
 import java.util.*;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+
 public class Main {
     public static void main(String[] args) {
         LoggingUtil logger = new LoggingUtil();
@@ -18,7 +17,7 @@ public class Main {
             System.out.println("5. Exit");
             System.out.println("Enter your choice: ");
             int choice = scanner.nextInt();
-            scanner.nextLine(); // Consume newline
+            scanner.nextLine();
 
             switch (choice) {
                 case 1:
@@ -90,65 +89,4 @@ public class Main {
             }
         }
     }
-//    public static void addStudent(Scanner scanner, StudentRepository repository) {
-//        System.out.println("Enter student ID:");
-//        int id = scanner.nextInt();
-//
-//        System.out.println("Enter student name:");
-//        scanner.nextLine();
-//        String name = scanner.nextLine();
-//
-//        System.out.println("Enter student age:");
-//        int age = scanner.nextInt();
-//
-//        System.out.println("Enter student grade:");
-//        String grade = scanner.next();
-//
-//        Student student = new Student(id, name, age, grade);
-//        repository.addStudent(student);
-//        logger.addLog(student);
-//    }
-
-//    public static void retrieveById(Scanner scanner, StudentRepository repository) {
-//        System.out.println("Enter student ID to retrieve:");
-//        int id = scanner.nextInt();
-//
-//        Student retrievedStudent = repository.getStudent(id);
-//        logger.getstuid(retrievedStudent);
-//    }
-
-//    public static void retrieveByName(Scanner scanner, StudentRepository repository) {
-//        System.out.println("Enter student name to retrieve:");
-//        String name = scanner.nextLine().toLowerCase();
-//
-//        Student retrievedStudent = repository.getStudent(name);
-//        logger.getstuname(retrievedStudent);
-//    }
-//    private static void updateStudent(Scanner scanner, StudentRepository repository) {
-//        System.out.println("Enter student ID to update:");
-//        int id = scanner.nextInt();
-//
-//        Student existingStudent = repository.getStudent(id);
-//        if (existingStudent != null) {
-//            System.out.println("Enter updated student name:");
-//            scanner.nextLine();
-//            String name = scanner.nextLine();
-//
-//            System.out.println("Enter updated student age:");
-//            int age = scanner.nextInt();
-//
-//            System.out.println("Enter updated student grade:");
-//            String grade = scanner.next();
-//
-//            Student updatedStudent = new Student(id, name, age, grade);
-//            if (repository.update(updatedStudent)) {
-//                System.out.println("Student information updated: " + updatedStudent);
-//                logger.updlog(updatedStudent);
-//            } else {
-//                System.out.println("Failed to update student information.");
-//            }
-//
-//        } else {
-//            System.out.println("Student not found for ID: " + id);
-//        }
 }

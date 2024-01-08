@@ -3,7 +3,6 @@ import java.util.*;
 
 public class StudentRepository {
     private final List<Student> students;
-//    LoggingUtil loggers = new LoggingUtil();
 
     public StudentRepository(){
         students = new ArrayList<>();
@@ -11,13 +10,11 @@ public class StudentRepository {
 
     public void addStudent(Student student){
         students.add(student);
-//        loggers.addLog(student);
     }
 
     public Student getStudent(int id){
         for(Student stu : students){
             if(stu.getId() == id) {
-//                loggers.getstuid(stu);
                 return stu;
             }
         }
@@ -28,7 +25,6 @@ public class StudentRepository {
     public Student getStudent(String name){
         for(Student stu : students){
             if(Objects.equals(stu.getName(), name)) {
-//                loggers.getstuname(stu);
                 return stu;
             }
         }
@@ -40,7 +36,6 @@ public class StudentRepository {
         for(int i = 0;i < students.size();i++){
             if(students.get(i).getId() == up.getId()){
                 students.set(i, up);
-//                loggers.updlog(up);
                 return true;
             }
         }
